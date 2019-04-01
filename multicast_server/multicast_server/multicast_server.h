@@ -5,7 +5,6 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <stdio.h>
-#include "circular_buffer.h"
 
 #pragma comment(lib, "ws2_32")
 
@@ -18,7 +17,7 @@ bool disable_loopback(SOCKET *hSocket);
 DWORD WINAPI broadcast_data(LPVOID lp);
 DWORD WINAPI store_audio_data(LPVOID lp);
 
-#define BUFSIZE			1024
+#define BUFSIZE			8912
 #define MAXADDRSTR		16
 #define TIMECAST_ADDR   "234.5.6.7"
 #define TIMECAST_PORT   8910

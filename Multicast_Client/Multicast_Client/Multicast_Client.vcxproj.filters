@@ -21,12 +21,18 @@
     <ClInclude Include="multicast_client.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="audio_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Multicast_Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio_api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

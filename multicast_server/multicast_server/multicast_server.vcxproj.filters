@@ -21,9 +21,6 @@
     <ClInclude Include="multicast_server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="circular_buffer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

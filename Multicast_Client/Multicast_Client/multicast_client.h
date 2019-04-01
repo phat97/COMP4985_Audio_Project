@@ -5,6 +5,7 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <stdio.h>
+#include "audio_api.h"
 
 #pragma comment(lib, "ws2_32")
 
@@ -16,9 +17,10 @@ bool join_multicast_group(struct ip_mreq *stMreq, SOCKET *hSocket, char *achMCAd
 bool leave_multicast_group(struct ip_mreq *stMreq, SOCKET *hSocket, char *achMCAddr);
 DWORD WINAPI receive_data(LPVOID lp);
 void CALLBACK completion_routine(DWORD Error, DWORD BytesTransferred, LPWSAOVERLAPPED Overlapped, DWORD InFlags);
+void CALLBACK FileStream_ReceiveRoutine(DWORD Error, DWORD BytesTransferred, LPWSAOVERLAPPED Overlapped, DWORD InFlags);
 bool play_audio();
 
-#define BUFSIZE			1024
+#define BUFSIZE			8912
 #define MAXADDRSTR		16
 #define TIMECAST_ADDR   "234.5.6.7"
 #define TIMECAST_PORT   8910
